@@ -17,6 +17,33 @@ const shell = document.querySelector('.shell');
 
 let infoKind = 'default';
 let activeItem = null;
+const exampleIds = {
+  'project-01': 'track_to_move',
+  'project-02': 'thumbs_up_to_click',
+  'project-03': 'balloon_face',
+};
+let viewedExample = null;
+let viewedAt = 0;
+
+function trackEvent(name, parameters) {
+  if (typeof window.gtag === 'function') window.gtag('event', name, parameters);
+}
+
+function updateExampleView(nextExample, endReason = 'navigation') {
+  if (viewedExample === nextExample) return;
+  if (viewedExample) {
+    trackEvent('example_view_end', {
+      example_id: exampleIds[viewedExample],
+      duration_seconds: Math.round((performance.now() - viewedAt) / 1000),
+      end_reason: endReason,
+    });
+  }
+  viewedExample = nextExample;
+  if (nextExample) {
+    viewedAt = performance.now();
+    trackEvent('example_view_start', { example_id: exampleIds[nextExample] });
+  }
+}
 
 function setHelp(open) {
   helpPopup.classList.toggle('open', open);
@@ -78,6 +105,7 @@ function renderPage() {
   diggingPage.hidden = currentPage !== 'digging';
   const activeProject = currentPage === 'interactive' && [...interactiveProjectDetails]
     .some(detail => detail.dataset.detailFor === requestedProject) ? requestedProject : null;
+  updateExampleView(activeProject);
   interactiveDetail.hidden = !activeProject;
   interactiveProjectDetails.forEach(detail => {
     detail.hidden = detail.dataset.detailFor !== activeProject;
@@ -115,8 +143,19 @@ interactiveProjectLinks.forEach(link => {
   });
 });
 
+document.querySelectorAll('.interactive-live-link').forEach(link => {
+  link.addEventListener('click', () => {
+    const project = link.closest('[data-detail-for]')?.dataset.detailFor;
+    if (project) trackEvent('example_launch', { example_id: exampleIds[project] });
+  });
+});
+
 window.addEventListener('popstate', renderPage);
 window.addEventListener('hashchange', renderPage);
+window.addEventListener('pagehide', () => updateExampleView(null, 'page_exit'));
+window.addEventListener('pageshow', event => {
+  if (event.persisted) renderPage();
+});
 renderPage();
 
 helpButton.addEventListener('click', () => {
