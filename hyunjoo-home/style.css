@@ -159,6 +159,21 @@ a:focus-visible,button:focus-visible {
   height:auto;
 }
 
+.music-gif:hover,
+.music-gif:focus,
+.music-gif:active {
+  background:transparent;
+}
+
+.music-gif:focus-visible {
+  outline:none;
+}
+
+.music-gif:is(:hover,:focus,:active) img {
+  filter:drop-shadow(2px 0 0 #ffff00) drop-shadow(-2px 0 0 #ffff00)
+    drop-shadow(0 2px 0 #ffff00) drop-shadow(0 -2px 0 #ffff00);
+}
+
 .smile-gif img {
   display:block;
   width:100%;
