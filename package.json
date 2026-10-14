@@ -1,0 +1,8 @@
+{
+  "name": "hyunjoo-home-workspace",
+  "private": true,
+  "scripts": {
+    "dev": "node hyunjoo-home/dev-server.mjs",
+    "build": "npm --prefix hyunjoo-home run build"
+  }
+}
