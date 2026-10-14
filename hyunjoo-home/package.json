@@ -1,0 +1,8 @@
+{
+  "name": "hyunjoo-home-page",
+  "private": true,
+  "scripts": {
+    "dev": "node dev-server.mjs",
+    "build": "node build.mjs"
+  }
+}

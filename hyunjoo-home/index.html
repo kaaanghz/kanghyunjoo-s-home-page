@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#85d8e4">
+  <meta name="description" content="Hyunjoo Kang's little corner of the World Wide Web.">
+  <title>Hyunjoo's Home Page</title>
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230000ff'/%3E%3Cpath d='M32 5 38 25 59 25 42 38 49 59 32 46 15 59 22 38 5 25 26 25Z' fill='%23ffff00' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="shell" id="home">
+    <header class="topbar">
+      <span class="site-name">HyunjooKang's Home Page</span>
+      <div class="top-icons">
+        <button class="help" type="button" aria-label="Page help" aria-expanded="false"
+          aria-controls="help-popup">?</button>
+      </div>
+    </header>
+
+    <div class="help-popup" id="help-popup" role="dialog" aria-label="Page help">
+      <button type="button" class="close-help" aria-label="Close">×</button>
+      <strong>Info</strong>
+      <div class="info-default">
+        <p>No information. Just enjoy🦭</p>
+      </div>
+      <div class="info-item" hidden>
+        <p class="description-ko" lang="ko"></p>
+        <p class="description-en" lang="en"></p>
+      </div>
+    </div>
+
+    <aside class="sidebar" aria-label="Site menu">
+      <span class="side-title">Menu</span>
+      <nav aria-label="Main navigation">
+        <ul class="menu-list">
+          <li><a href="#about" data-page="about">About</a></li>
+          <li><a href="#home" class="selected" data-page="home" aria-current="page">Home</a></li>
+          <li><a href="#projects">Graphic</a></li>
+          <li><a href="#interactive" data-page="interactive">Interactive</a></li>
+          <li><a href="#digging" data-page="digging">Digging...</a></li>
+        </ul>
+      </nav>
+
+      <div class="music-gif">
+        <img src="assets/music.gif" alt="반짝이는 CD와 음악 아이콘 애니메이션">
+      </div>
+      <div class="smile-gif">
+        <img src="assets/smile.gif" alt="움직이는 금색 이모지">
+      </div>
+      <div class="side-footer">BEST VIEWED WITH CURIOSITY</div>
+    </aside>
+
+    <main class="main">
+      <div class="home-page" id="home-page">
+        <section class="welcome" aria-labelledby="welcome-heading">
+          <h1 id="welcome-heading"><img src="assets/svg/welcome.svg" alt="Welcome!"></h1>
+          <p>Visiters! Let’s find funny projects with me.</p>
+        </section>
+
+        <section class="banner-stack" aria-label="Featured banners">
+          <a class="banner banner-one" href="#projects" id="projects">
+            <img src="assets/svg/banner1.svg" alt="NEW PROJECT! ART EDITORIAL DESIGN — CLICK ME">
+          </a>
+          <a class="banner banner-two" href="#places" id="places">
+            <span>Banner -2</span>
+          </a>
+        </section>
+      </div>
+
+      <section class="about-page" aria-labelledby="about-heading" hidden>
+        <div class="about-card">
+          <h1 id="about-heading">About</h1>
+          <p>Hi, I'm Hyunjoo Kang. Welcome to my little corner of the web!</p>
+          <p>Here you'll find my graphic and interactive projects, along with the things I've been digging lately.</p>
+        </div>
+      </section>
+
+      <section class="interactive-page" aria-label="Interactive projects" hidden>
+        <div class="interactive-layout">
+          <nav class="interactive-project-list" aria-label="Interactive projects">
+            <a class="interactive-project" href="#interactive/project-01" data-interactive-project="project-01" aria-controls="interactive-detail">
+              <span class="interactive-project-thumb" aria-hidden="true"><img src="assets/interactive/track-to-move-thumb.jpg" alt="" width="400" height="236" loading="lazy"></span>
+              <span class="interactive-project-name"><strong>Track to Move...</strong></span>
+            </a>
+            <a class="interactive-project" href="#interactive/project-02" data-interactive-project="project-02" aria-controls="interactive-detail">
+              <span class="interactive-project-thumb" aria-hidden="true"><img src="assets/interactive/thumbs-up-to-click-thumb.jpg" alt="" width="400" height="214" loading="lazy"></span>
+              <span class="interactive-project-name"><strong>Thumbs Up to Click</strong></span>
+            </a>
+            <a class="interactive-project" href="#interactive/project-03" data-interactive-project="project-03" aria-controls="interactive-detail">
+              <span class="interactive-project-thumb" aria-hidden="true"><img src="assets/interactive/balloon-face-thumb.jpg" alt="" width="400" height="214" loading="lazy"></span>
+              <span class="interactive-project-name"><strong>Balloon Face</strong></span>
+            </a>
+          </nav>
+
+          <div class="interactive-detail" id="interactive-detail" aria-live="polite" hidden>
+            <article class="interactive-project-detail" data-detail-for="project-01" hidden>
+              <div class="interactive-preview"><img src="assets/interactive/track-to-move-detail.jpg" alt="Night waterfront scene with tracked movement boxes" width="1200" height="708" loading="lazy"></div>
+              <p class="interactive-detail-number">INTERACTIVE / 01</p>
+              <h2>Track to Move...</h2>
+            </article>
+            <article class="interactive-project-detail" data-detail-for="project-02" hidden>
+              <div class="interactive-preview"><img src="assets/interactive/thumbs-up-to-click-detail.jpg" alt="Multiple frames of a person giving a thumbs up" width="1200" height="642" loading="lazy"></div>
+              <p class="interactive-detail-number">INTERACTIVE / 02</p>
+              <h2>Thumbs Up to Click</h2>
+            </article>
+            <article class="interactive-project-detail" data-detail-for="project-03" hidden>
+              <div class="interactive-preview"><img src="assets/interactive/balloon-face-detail.jpg" alt="Face transformed into a blue balloon in an indoor scene" width="1200" height="642" loading="lazy"></div>
+              <p class="interactive-detail-number">INTERACTIVE / 03</p>
+              <h2>Balloon Face</h2>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="digging-page" aria-label="Digging collection" hidden>
+        <div class="digging-board">
+          <button class="digging-item digging-item-plush" type="button"
+            data-title="쿠리만쥬 인형 (Kurimanjyu Plush)"
+            data-description-ko="데스크탑 걸이형 인형으로 굉장한 성능을 보여준다. 귀여운 효능과 함께..."
+            data-description-en="A hanging desktop companion with remarkable performance, along with its adorable benefits..."
+            aria-label="쿠리만쥬 인형. 클릭하면 설명, 드래그하면 이동, 아래 손잡이로 크기 조절, 위 손잡이로 회전">
+            <img src="assets/kurimanjyu-cutout.png" alt="컵을 들고 있는 쿠리만쥬 인형" draggable="false">
+            <span class="resize-handle" aria-hidden="true"></span>
+            <span class="rotate-handle" aria-hidden="true"></span>
+          </button>
+          <button class="digging-item digging-item-cass" type="button"
+            data-title="카스 레몬 스퀴즈 (Cass Lemon Squeeze)"
+            data-description-ko="맥주 향이 가미된 맥주를 마실땐 끝맛에 특유의 비린맛이나 단맛이 날때가 있는데, 이건 아주 깔끔하다. 가격 또한 아주 합리적이다."
+            data-description-en="Some flavored beers leave a peculiar fishy or sweet aftertaste, but this one finishes very cleanly. The price is also very reasonable."
+            aria-label="카스 레몬 스퀴즈. 클릭하면 설명, 드래그하면 이동, 아래 손잡이로 크기 조절, 위 손잡이로 회전">
+            <img src="assets/cass-lemon-squeeze-cutout.png" alt="카스 레몬 스퀴즈 캔" draggable="false">
+            <span class="resize-handle" aria-hidden="true"></span>
+            <span class="rotate-handle" aria-hidden="true"></span>
+          </button>
+          <button class="digging-item digging-item-swings" type="button"
+            data-title="스윙스 감사 자기 암시 (Swings)"
+            data-description-ko="묘하게 종종 듣게 됨"
+            data-description-en="For some reason, I find myself listening to it every now and then."
+            aria-label="스윙스 감사 자기 암시. 클릭하면 설명, 드래그하면 이동, 아래 손잡이로 크기 조절, 위 손잡이로 회전">
+            <img src="assets/swings-affirmations.jpg" alt="스윙스 감사 자기 암시 재생 화면" draggable="false">
+            <span class="resize-handle" aria-hidden="true"></span>
+            <span class="rotate-handle" aria-hidden="true"></span>
+          </button>
+          <button class="digging-item digging-item-drawing" type="button"
+            data-title="서도호 작가 드로잉 (Drawing by Do Ho Suh)"
+            data-description-ko="국립현대미술관에서 진행하는 서도호 전에서 발견한 마음에 드는 드로잉"
+            data-description-en="A drawing I came across and liked at the Do Ho Suh exhibition at the National Museum of Modern and Contemporary Art."
+            aria-label="서도호 작가 드로잉. 클릭하면 설명, 드래그하면 이동, 아래 손잡이로 크기 조절, 위 손잡이로 회전">
+            <img src="assets/do-ho-suh-drawing.jpg" alt="서도호 작가의 푸른 선 드로잉 사진" draggable="false">
+            <span class="resize-handle" aria-hidden="true"></span>
+            <span class="rotate-handle" aria-hidden="true"></span>
+          </button>
+        </div>
+      </section>
+    </main>
+    <span class="corner-emoji corner-seal" aria-hidden="true">🦭</span>
+    <span class="corner-emoji corner-tree" aria-hidden="true">🌳</span>
+    <span class="corner-emoji corner-fire" aria-hidden="true">🔥</span>
+    <span class="corner-emoji corner-heart" aria-hidden="true">❤️</span>
+  </div>
+  <script src="script.js" defer></script>
+</body>
+
+</html>
