@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NRGEYE4F8Q"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NRGEYE4F8Q');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <title>Track to Move...</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main id="app" aria-label="InvertBox camera artwork">
+      <video id="camera" autoplay muted playsinline></video>
+      <canvas id="patches" aria-hidden="true"></canvas>
+      <button id="retry" type="button" aria-label="카메라 다시 연결" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M14.5 5H9.5L7.8 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3.8L14.5 5Z"/>
+          <circle cx="12" cy="13" r="3.5"/>
+        </svg>
+      </button>
+      <span id="status" class="sr-only" role="status"></span>
+    </main>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
