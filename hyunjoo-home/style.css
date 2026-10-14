@@ -441,11 +441,6 @@ a:focus-visible,button:focus-visible {
 
 .interactive-detail {
   min-width:0;
-  min-height:620px;
-  padding:23px;
-  background:rgba(255,255,255,.96);
-  border:3px ridge #fff;
-  box-shadow:6px 6px 0 #0000ee;
   font-family:Arial,sans-serif;
 }
 
@@ -454,13 +449,6 @@ a:focus-visible,button:focus-visible {
   aspect-ratio:16 / 10;
   align-items:center;
   justify-content:center;
-  flex-direction:column;
-  gap:10px;
-  background:#d9eef4;
-  border:2px inset #fff;
-  color:#0000ee;
-  font:bold clamp(26px,3vw,42px) "Times New Roman",Times,serif;
-  text-align:center;
 }
 
 .interactive-preview img,
@@ -471,22 +459,9 @@ a:focus-visible,button:focus-visible {
   object-fit:contain;
 }
 
-.interactive-detail-number {
-  margin:22px 0 7px;
-  color:#0000ee;
-  font:bold 12px Arial,sans-serif;
-  letter-spacing:1px;
-}
-
 .interactive-project-detail h2 {
-  margin:0 0 14px;
+  margin:14px 0 0;
   font:bold 30px Arial,sans-serif;
-}
-
-.interactive-project-detail > p:last-child {
-  margin:0;
-  font-size:16px;
-  line-height:1.45;
 }
 
 /* The Digging collection shares the same page frame as Home. */
@@ -768,11 +743,6 @@ a:focus-visible,button:focus-visible {
     gap:16px;
   }
 
-  .interactive-detail {
-    min-height:500px;
-    padding:15px;
-  }
-
   .digging-page,
   .digging-board {
     min-height:calc(100vh - 72px);
@@ -912,11 +882,6 @@ a:focus-visible,button:focus-visible {
 
   .interactive-project-name {
     margin-top:0;
-  }
-
-  .interactive-detail {
-    min-height:360px;
-    padding:12px;
   }
 
   .interactive-project-detail h2 {
