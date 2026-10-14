@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Motion Trace</title>
+    <script type="module" crossorigin src="./assets/index-BUF6Fd-b.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CGOOTriz.css">
+  </head>
+  <body>
+    <main id="app">
+      <video id="camera" autoplay muted playsinline aria-label="실시간 카메라 화면"></video>
+      <canvas id="camera-effect" aria-hidden="true"></canvas>
+      <div class="shade" aria-hidden="true"></div>
+      <canvas id="particles" aria-hidden="true"></canvas>
+      <canvas id="tracking-boxes" aria-hidden="true"></canvas>
+      <section id="welcome" class="welcome">
+        <span class="eyebrow">LIVE MOTION STUDY / 001</span>
+        <h1>Motion<br /><em>Trace</em></h1>
+        <p>움직임의 흔적을 따라, 순간적으로 나타나는 빛.</p>
+        <button id="start" type="button">카메라 시작 <span aria-hidden="true">↗</span></button>
+        <small id="message" role="status">카메라 사용 권한이 필요합니다.</small>
+      </section>
+    </main>
+  </body>
+</html>

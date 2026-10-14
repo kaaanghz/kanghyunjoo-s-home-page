@@ -17,6 +17,7 @@ const mime = {
   '.gif': 'image/gif',
   '.webp': 'image/webp',
   '.woff2': 'font/woff2',
+  '.wasm': 'application/wasm',
 };
 
 const server = createServer((request, response) => {
@@ -28,9 +29,10 @@ const server = createServer((request, response) => {
     return;
   }
 
-  const publicPath = pathname === '/' ? '/index.html' : pathname;
+  const publicPath = pathname.endsWith('/') ? `${pathname}index.html` : pathname;
   if (!['/index.html', '/style.css', '/script.js'].includes(publicPath)
-      && !publicPath.startsWith('/assets/')) {
+      && !publicPath.startsWith('/assets/')
+      && !publicPath.startsWith('/projects/')) {
     response.writeHead(403).end('Forbidden');
     return;
   }

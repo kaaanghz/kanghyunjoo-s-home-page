@@ -479,6 +479,14 @@ a:focus-visible,button:focus-visible {
   font:bold 30px Arial,sans-serif;
 }
 
+.interactive-live-link {
+  display:inline-block;
+  margin-top:12px;
+  color:#0000ee;
+  font:bold 17px Arial,sans-serif;
+  text-decoration:underline;
+}
+
 /* The Digging collection shares the same page frame as Home. */
 .digging-page,
 .digging-board {

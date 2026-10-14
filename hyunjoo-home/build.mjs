@@ -16,4 +16,8 @@ if (existsSync(join(root, 'assets'))) {
   cpSync(join(root, 'assets'), join(output, 'assets'), { recursive: true });
 }
 
+if (existsSync(join(root, 'projects'))) {
+  cpSync(join(root, 'projects'), join(output, 'projects'), { recursive: true });
+}
+
 console.log('Built site in dist/');
