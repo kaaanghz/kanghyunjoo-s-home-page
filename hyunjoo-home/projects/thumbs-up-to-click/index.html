@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NRGEYE4F8Q"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NRGEYE4F8Q');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="엄지척 세 번으로 완성하는 카메라 포토 퍼포먼스" />
+    <title>Thumbs Up to Click</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="camera-stage" aria-label="ThumbsUp 카메라 촬영 화면">
+      <video id="camera" playsinline muted aria-label="실시간 카메라 화면"></video>
+      <canvas id="captures" aria-label="촬영된 인물 컷아웃"></canvas>
+
+      <div id="flash" class="flash" aria-hidden="true"></div>
+      <div id="countdown" class="countdown" role="status" aria-live="assertive" hidden></div>
+
+      <header class="topbar">
+        <h1>ThumbsUp</h1>
+        <div id="progress" class="progress" aria-label="촬영 진행: 0 / 3">
+          <span></span><span></span><span></span>
+        </div>
+      </header>
+
+      <section id="statusPanel" class="status-panel" aria-live="polite">
+        <p id="statusText">카메라를 연결하는 중...</p>
+      </section>
+
+      <div class="controls">
+        <button id="startButton" class="retry-button" type="button" hidden>카메라 다시 시도</button>
+        <button id="captureButton" class="capture-button" type="button" aria-label="사진 촬영" hidden></button>
+        <button id="resetButton" class="reset-button" type="button" hidden>다시 찍기</button>
+      </div>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

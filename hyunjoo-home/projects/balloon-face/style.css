@@ -1,0 +1,15 @@
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; overflow: hidden; background: #080b12; color: #f2f0e9; }
+button { font: inherit; }
+.experience { position: relative; width: 100vw; height: 100vh; overflow: hidden; background: #111720; }
+#webcam { display: none; }
+#scene { position: absolute; inset: 0; width: 100%; height: 100%; }
+.vignette { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse at center, transparent 34%, rgba(2,5,10,.20) 100%); box-shadow: inset 0 0 110px rgba(0,0,0,.38); }
+.hud { position: absolute; z-index: 2; top: 22px; left: 27px; right: 27px; display: flex; justify-content: space-between; font: 11px "DM Mono", monospace; letter-spacing: .11em; color: rgba(255,255,255,.77); text-shadow: 0 1px 8px #000; }.hud p { margin: 0; }
+.retry-start { position: absolute; z-index: 3; top: 50%; left: 50%; transform: translate(-50%,-50%); border: 1px solid #c4f6df; background: #c4f6df; color: #0d201c; padding: 14px 17px; cursor: pointer; font: 11px "DM Mono", monospace; letter-spacing: .08em; }
+.retry-start[hidden] { display: none; }
+.meter { position: absolute; z-index: 2; display: none; left: 27px; bottom: 28px; width: 185px; font: 10px "DM Mono", monospace; letter-spacing: .12em; text-shadow: 0 1px 8px #000; }.experience.live .meter, .experience.live .prompt, .experience.live .reset { display: block; }.meter span { color: rgba(255,255,255,.75); }.meter-track { height: 2px; margin-top: 9px; background: rgba(255,255,255,.32); }.meter-track i { display: block; width: 0; height: 100%; background: #c7f7e4; box-shadow: 0 0 12px #c7f7e4; transition: width .08s linear; }.meter b { display: block; margin-top: 7px; color: #fff; font-weight: 400; }
+.prompt { position: absolute; z-index: 2; display: none; bottom: 31px; left: 50%; transform: translateX(-50%); margin: 0; color: rgba(255,255,255,.76); font: 10px "DM Mono", monospace; letter-spacing: .1em; text-align: center; text-shadow: 0 1px 8px #000; }.prompt.ready { color: #c7f7e4; }
+.reset { position: absolute; z-index: 2; display: none; right: 27px; bottom: 27px; border: 0; padding: 0; background: none; color: rgba(255,255,255,.78); cursor: pointer; font: 10px "DM Mono", monospace; letter-spacing: .1em; text-shadow: 0 1px 8px #000; }.reset:hover { color: #c7f7e4; }
+@media(max-width: 600px) { .hud { top: 16px; left: 16px; right: 16px; font-size: 9px; }.meter { bottom: 18px; left: 17px; }.reset { bottom: 18px; right: 17px; }.prompt { display: none !important; } }

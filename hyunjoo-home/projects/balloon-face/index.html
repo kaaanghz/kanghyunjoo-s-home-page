@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NRGEYE4F8Q"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NRGEYE4F8Q');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080b12" />
+    <title>Balloon Face</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="experience">
+      <video id="webcam" autoplay muted playsinline></video>
+      <canvas id="scene"></canvas>
+      <div class="vignette"></div>
+
+      <header class="hud">
+        <p>PUFF PORTRAIT / 01</p>
+        <p id="trackingStatus">CAMERA STANDBY</p>
+      </header>
+
+      <button id="startButton" class="retry-start" type="button" hidden>카메라 다시 시도 ↗</button>
+
+      <div class="meter" aria-live="polite">
+        <span>INFLATION</span>
+        <div class="meter-track"><i id="meterFill"></i></div>
+        <b id="meterText">0%</b>
+      </div>
+      <p id="prompt" class="prompt">THUMB TO LIPS · PUCKER YOUR MOUTH</p>
+      <button id="resetButton" class="reset" type="button">CLEAR SKY</button>
+    </main>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
